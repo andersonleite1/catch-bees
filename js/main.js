@@ -11,6 +11,11 @@ function adjustStageSize() {
 adjustStageSize();
 
 function randomPosition() {
+    // remover bee anterior (caso exista)
+    if(document.getElementById('bee')) {
+        document.getElementById('bee').remove();
+    }
+
     var positionX = Math.floor(Math.random() * width) - 90;
     var positionY = Math.floor(Math.random() * height) - 90;
 
@@ -26,6 +31,7 @@ function randomPosition() {
     bee.style.left = positionX + 'px';
     bee.style.top  = positionY + 'px';
     bee.style.position = 'absolute';
+    bee.id = 'bee';
 
     document.body.appendChild(bee);
     randomSide();
