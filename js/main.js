@@ -17,7 +17,7 @@ function randomPosition() {
         document.getElementById('bee').remove();
 
         if(lifes > 5) {
-            alert("Interromper o jogo (game over)");
+            window.location.href = "game-over.html";
         } else {
             document.getElementById('life' + lifes).src="img/empty-heart.png";
             lifes++;
