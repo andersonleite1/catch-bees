@@ -12,3 +12,11 @@
     width: 90px;
     height: 90px;
 }
+
+.sideA{
+    transform: scaleY(1);
+}
+
+.sideB{
+    transform: scaleY(-1);
+}
