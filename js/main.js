@@ -1,5 +1,6 @@
 var height = 0;
 var width  = 0;
+var lifes = 1;
 
 function adjustStageSize() {
     width  = window.innerWidth;
@@ -14,6 +15,13 @@ function randomPosition() {
     // remover bee anterior (caso exista)
     if(document.getElementById('bee')) {
         document.getElementById('bee').remove();
+
+        if(lifes > 5) {
+            alert("Interromper o jogo (game over)");
+        } else {
+            document.getElementById('life' + lifes).src="img/empty-heart.png";
+            lifes++;
+        }      
     }
 
     var positionX = Math.floor(Math.random() * width) - 90;
@@ -32,6 +40,9 @@ function randomPosition() {
     bee.style.top  = positionY + 'px';
     bee.style.position = 'absolute';
     bee.id = 'bee';
+    bee.onclick = function() {
+        this.remove();
+    }
 
     document.body.appendChild(bee);
     randomSide();
