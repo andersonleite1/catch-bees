@@ -18,7 +18,7 @@ var stopwatch = setInterval(function(){
     if(time < 0) {
         clearInterval(stopwatch);
         clearInterval(createBee);
-        alert('Vitoria');
+        window.location.href = "victory.html";
     } else {
         document.getElementById('stopwatch').innerHTML = time; 
     }
