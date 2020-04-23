@@ -22,12 +22,27 @@ function randomPosition() {
     // criar o elemento html
     var bee = document.createElement('img');
     bee.src = 'img/bee.png';
-    bee.className  = 'bee1';
+    bee.className  = randomSize();
     bee.style.left = positionX + 'px';
     bee.style.top  = positionY + 'px';
     bee.style.position = 'absolute';
 
     document.body.appendChild(bee);
+}
+
+function randomSize() {
+    var value = Math.floor(Math.random() * 3);
+
+    switch(value) {
+        case 0:
+            return 'bee1'
+
+        case 1:
+            return 'bee2'
+
+        case 2:
+            return 'bee3'
+    }
 }
 
 
