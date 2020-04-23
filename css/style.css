@@ -1,3 +1,8 @@
+body{
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+}
+
 .bee1{
     width: 50px;
     height: 50px;
@@ -19,4 +24,25 @@
 
 .sideB{
     transform: scaleY(-1);
+}
+
+.panel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    left: 0px;
+    border-top: solid 1px #fff;
+    background-color: #fff;
+    opacity: 0.7;
+}
+
+.lifes{
+    float: left;
+}
+
+.time{
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
 }
