@@ -1,6 +1,7 @@
 var height = 0;
 var width  = 0;
 var lifes = 1;
+var time = 20;
 
 function adjustStageSize() {
     width  = window.innerWidth;
@@ -10,6 +11,19 @@ function adjustStageSize() {
 }
 
 adjustStageSize();
+
+var stopwatch = setInterval(function(){
+    time -= 1;
+
+    if(time < 0) {
+        clearInterval(stopwatch);
+        clearInterval(createBee);
+        alert('Vitoria');
+    } else {
+        document.getElementById('stopwatch').innerHTML = time; 
+    }
+
+}, 1000);
 
 function randomPosition() {
     // remover bee anterior (caso exista)

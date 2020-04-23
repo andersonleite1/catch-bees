@@ -18,13 +18,14 @@
         </div>
             
         <div class="time">
-            Tempo restante: ?
+            Tempo restante: <span id="stopwatch"></span>
         </div>
     </div>
 
     <script src="./js/main.js"></script>
     <script>
-        setInterval(function() {
+        document.getElementById('stopwatch').innerHTML = time; 
+        var createBee = setInterval(function() {
             randomPosition();
         }, 2000);
     </script>
