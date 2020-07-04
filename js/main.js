@@ -3,6 +3,18 @@ var width  = 0;
 var lifes = 1;
 var time = 20;
 
+var createBeeTime = 1500;
+
+var level = window.location.search.replace('?', '');
+
+if(level === 'normal') {
+    createBeeTime = 1500;
+} else if(level === 'hard') {
+    createBeeTime = 1000;
+} else if(level === 'chucknorris') {
+    createBeeTime = 750;
+}
+
 function adjustStageSize() {
     width  = window.innerWidth;
     height = window.innerHeight;
