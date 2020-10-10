@@ -1,7 +1,7 @@
 var height = 0;
 var width  = 0;
 var lifes = 1;
-var time = 20;
+var time = 60;
 
 var createBeeTime = 1500;
 
