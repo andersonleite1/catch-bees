@@ -1,11 +1,11 @@
-var height = 0;
-var width  = 0;
-var lifes = 1;
-var time = 60;
+let height = 0;
+let width  = 0;
+let lifes = 1;
+let time = 60;
 
-var createBeeTime = 1500;
+let createBeeTime = 1500;
 
-var level = window.location.search.replace('?', '');
+let level = window.location.search.replace('?', '');
 
 if(level === 'normal') {
     createBeeTime = 1500;
@@ -24,7 +24,7 @@ function adjustStageSize() {
 
 adjustStageSize();
 
-var stopwatch = setInterval(function(){
+let stopwatch = setInterval(function(){
     time -= 1;
 
     if(time < 0) {
@@ -50,8 +50,8 @@ function randomPosition() {
         }      
     }
 
-    var positionX = Math.floor(Math.random() * width) - 90;
-    var positionY = Math.floor(Math.random() * height) - 90;
+    let positionX = Math.floor(Math.random() * width) - 90;
+    let positionY = Math.floor(Math.random() * height) - 90;
 
     positionX = positionX < 0 ? 0 : positionX;
     positionY = positionY < 0 ? 0 : positionY;
@@ -59,7 +59,7 @@ function randomPosition() {
     console.log(positionX, positionY);
 
     // criar o elemento html
-    var bee = document.createElement('img');
+    let bee = document.createElement('img');
     bee.src = 'img/bee.png';
     bee.className  = randomSize() +' '+ randomSide();
     bee.style.left = positionX + 'px';
@@ -75,7 +75,7 @@ function randomPosition() {
 }
 
 function randomSize() {
-    var value = Math.floor(Math.random() * 3);
+    let value = Math.floor(Math.random() * 3);
 
     switch(value) {
         case 0:
@@ -90,7 +90,7 @@ function randomSize() {
 }
 
 function randomSide() {
-    var value = Math.floor(Math.random() * 2);
+    let value = Math.floor(Math.random() * 2);
 
     switch(value) {
         case 0:
